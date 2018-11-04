@@ -14,7 +14,7 @@
 					$_SESSION['username']=$user_list[1];
 					$message_error='Iniciando sesión...';
 				else:
-					$message_error='Falló el inicio de sesión, por favor revisar su cuenta de usuario y contraseña';
+					$message_error='Falló el inicio de sesión, por favor revise su cuenta de usuario y contraseña';
 				endif;
 			else:
 				$message_error='Contraseña incorrecta !!!';
