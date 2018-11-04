@@ -12,18 +12,18 @@
 					$user_list=pg_fetch_array($res);
 					$_SESSION['id']=$user_list[0];
 					$_SESSION['username']=$user_list[1];
-					$message_error='logged now';
+					$message_error='Iniciando sesión...';
 				else:
-					$message_error='Login falied,please check your login account again';
+					$message_error='Falló el inicio de sesión, por favor revisar su cuenta de usuario y contraseña';
 				endif;
 			else:
-				$message_error='Wrong password.';
+				$message_error='Contraseña incorrecta !!!';
 			endif;
 		else:
-			$message_error='username not existed.';
+			$message_error='Digite un nombre de usuario';
 		endif;
 	else:
-		$message_error='All fields are required.';
+		$message_error='Campos Requeridos';
 	endif;
 	$json=array('data' => $message_ok, 'message' =>$message_error);
 	echo json_encode($json);
